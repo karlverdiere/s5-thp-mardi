@@ -1,0 +1,12 @@
+<h1> bienvenue <%= @first_name%> regarde nos gossip ^^</h1>
+<% @user_name.each do |user| %>
+<%@lol = user[:author]%>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 href= "/team"class="card-subtitle mb-2 text-muted"><%=  user[:content] %></h6>
+    <a href="/gossip/" class="card-link"><%=  user[:author] %></a>
+  </div>
+</div>
+
+<% end %>
